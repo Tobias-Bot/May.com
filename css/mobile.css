@@ -1,0 +1,395 @@
+@media (max-width: 768px) {
+    .container {
+        padding: 70px 10px 10px; /* Уменьшаем верхний отступ для мобильных */
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .date-time-card, .month-stats {
+        grid-column: span 1;
+    }
+
+    .floating-nav {
+        width: calc(100% - 20px);
+        bottom: 15px;
+        padding: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        max-width: 95vw;
+        box-sizing: border-box;
+    }
+
+    .nav-item {
+        padding: 8px 10px;
+        min-width: 50px;
+        flex: 1;
+    }
+
+    .nav-text {
+        font-size: 10px;
+    }
+
+    .current-time {
+        font-size: 36px;
+    }
+
+    .current-date-large {
+        font-size: 16px;
+    }
+
+    .family-grid, .cars-grid, .notes-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 15px;
+        margin-bottom: 15px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .card-header {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .stats-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .stat-item {
+        padding: 15px;
+    }
+
+    .stat-value {
+        font-size: 24px;
+    }
+
+    .month-chart {
+        height: 250px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 20px 15px;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+
+    .logo, .settings-btn {
+        top: 15px;
+    }
+
+    .logo {
+        left: 15px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .settings-btn {
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    body {
+        padding-top: 0;
+        padding-bottom: 100px;
+        overflow-x: hidden;
+    }
+
+    .quick-access-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .car-image {
+        height: 150px;
+    }
+
+    .member-avatar {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .note-card {
+        min-height: 180px;
+    }
+
+    /* Кнопка скрытых разделов для мобильных */
+    .hidden-sections-btn {
+        bottom: 75px;
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .hidden-sections-badge {
+        width: 18px;
+        height: 18px;
+        font-size: 10px;
+    }
+
+    /* Кнопка + на панели навигации для мобильных */
+    .apps-btn {
+        padding: 10px 14px;
+        margin: 0 8px;
+        min-width: 55px;
+    }
+
+    .apps-btn .nav-icon {
+        font-size: 18px;
+    }
+
+    /* Трекер сфер жизни для мобильных */
+    .life-sphere-item {
+        padding: 12px;
+    }
+
+    .life-sphere-icon {
+        font-size: 20px;
+        margin-right: 12px;
+    }
+
+    .life-sphere-name {
+        font-size: 14px;
+    }
+
+    .life-sphere-desc {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 65px 8px 8px; /* Еще уменьшаем верхний отступ */
+    }
+
+    .card {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+    .floating-nav {
+        width: calc(100% - 16px);
+        padding: 6px;
+        bottom: 12px;
+    }
+
+    .nav-item {
+        padding: 6px 8px;
+        min-width: 45px;
+    }
+
+    .nav-icon {
+        font-size: 16px;
+    }
+
+    .current-time {
+        font-size: 32px;
+    }
+
+    .current-date-large {
+        font-size: 14px;
+    }
+
+    .date-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .current-date {
+        font-size: 14px;
+    }
+
+    .modal-content {
+        width: 98%;
+        padding: 15px 12px;
+    }
+
+    .form-input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .quick-access-modal .modal-content {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .quick-access-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Кнопка скрытых разделов для маленьких экранов */
+    .hidden-sections-btn {
+        bottom: 70px;
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .hidden-sections-badge {
+        width: 16px;
+        height: 16px;
+        font-size: 9px;
+    }
+
+    /* Кнопка + на панели навигации для маленьких экранов */
+    .apps-btn {
+        padding: 8px 12px;
+        margin: 0 6px;
+        min-width: 50px;
+    }
+
+    .apps-btn .nav-icon {
+        font-size: 16px;
+    }
+
+    .life-sphere-item {
+        padding: 10px;
+    }
+
+    .life-sphere-icon {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+
+    .life-sphere-name {
+        font-size: 13px;
+    }
+
+    .life-sphere-desc {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 60px 8px 8px; /* Минимальный верхний отступ */
+    }
+
+    .floating-nav {
+        width: calc(100% - 10px);
+        border-radius: 12px;
+        bottom: 8px;
+        padding: 5px;
+    }
+
+    .nav-item {
+        padding: 6px;
+        min-width: 40px;
+    }
+
+    .nav-text {
+        font-size: 9px;
+    }
+
+    .apps-btn {
+        margin: 0 3px;
+        padding: 6px 10px;
+        min-width: 45px;
+    }
+
+    .apps-btn .nav-icon {
+        font-size: 14px;
+    }
+
+    .card-header {
+        font-size: 15px;
+    }
+
+    .quick-access-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Кнопка скрытых разделов для очень маленьких экранов */
+    .hidden-sections-btn {
+        bottom: 65px;
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .life-sphere-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .life-sphere-icon {
+        margin-right: 0;
+    }
+
+    .life-sphere-content {
+        text-align: center;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .life-sphere-item:hover {
+        transform: none;
+    }
+
+    .menu-btn:hover {
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    [data-theme="dark"] .menu-btn:hover {
+        background: rgba(60, 60, 70, 0.7);
+    }
+
+    .nav-item:hover {
+        background-color: transparent;
+    }
+
+    .nav-item.active:hover {
+        background-color: rgba(26, 71, 42, 0.1);
+    }
+
+    .quick-access-item:hover {
+        transform: none;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+
+    .add-card:hover {
+        transform: none;
+    }
+
+    /* Отключаем анимацию пульсации на мобильных */
+    .apps-btn {
+        animation: none;
+    }
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}

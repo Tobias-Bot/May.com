@@ -1,0 +1,162 @@
+/* Стили логотипа и верхней панели */
+.logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    pointer-events: auto; /* Разрешаем клики */
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 0;
+    background: transparent;
+}
+
+.settings-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--glass-color);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    box-shadow: var(--shadow);
+    font-size: 20px;
+    color: var(--accent-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    pointer-events: auto; /* Разрешаем клики */
+}
+
+.settings-btn:hover {
+    transform: rotate(90deg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px 20px; /* Увеличиваем верхний отступ для header */
+    overflow-x: hidden;
+    min-height: calc(100vh - 140px); /* Занимаем всю высоту экрана минус панель навигации */
+    box-sizing: border-box;
+}
+
+/* Навигация */
+.floating-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--glass-color);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+    max-width: 90vw;
+}
+
+.floating-nav.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(20px);
+}
+
+.nav-item {
+    padding: 10px 16px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 60px;
+    flex: 1;
+}
+
+.nav-item.active {
+    background-color: rgba(26, 71, 42, 0.1);
+    color: var(--accent-color);
+}
+
+.nav-icon {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.nav-text {
+    font-size: 12px;
+}
+
+/* Специальная кнопка + на панели навигации */
+.apps-btn {
+    position: relative;
+    padding: 12px 16px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 60px;
+    margin: 0 10px;
+    flex: 0 0 auto;
+    background: linear-gradient(135deg, var(--accent-color), #2d7a4d);
+    box-shadow: 0 4px 15px rgba(26, 71, 42, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.apps-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 71, 42, 0.4);
+    background: linear-gradient(135deg, #2d7a4d, var(--accent-color));
+}
+
+.apps-btn .nav-icon {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Анимация пульсации для кнопки + */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(26, 71, 42, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(26, 71, 42, 0.5);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(26, 71, 42, 0.3);
+    }
+}
+
+.apps-btn {
+    animation: pulse 2s infinite;
+}
+
+/* Вкладки */
+.tab-content {
+    display: none;
+    height: 100%; /* Занимаем всю высоту */
+}
+
+.tab-content.active {
+    display: block;
+}

@@ -1,0 +1,385 @@
+/* Карточки */
+.card {
+    background: var(--glass-color);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.dashboard-card {
+    background: var(--glass-color);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    overflow: visible;
+    position: relative;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    height: auto; /* Убираем фиксированную высоту */
+    min-height: auto;
+    overflow: visible; /* Убираем скролл */
+}
+
+.date-time-card {
+    text-align: center;
+    padding: 30px 20px;
+    grid-column: span 2;
+}
+
+.current-time {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.current-date-large {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.season-emoji {
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+/* Заголовки карточек */
+.card-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header-add-btn {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.header-add-btn:hover {
+    background: #0d2e1a;
+    transform: scale(1.1);
+}
+
+/* Карточки добавления */
+.add-card {
+    background: var(--glass-color);
+    backdrop-filter: blur(10px);
+    border: 2px dashed var(--glass-border);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-height: 200px;
+}
+
+.add-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.add-card-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+    color: var(--accent-color);
+}
+
+.restore-section-card {
+    margin-bottom: 20px;
+}
+
+/* Сетки */
+.family-grid, .cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Элементы карточек */
+.family-card, .car-card {
+    background: var(--glass-color);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+}
+
+.member-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 32px;
+    border: 1px solid var(--glass-border);
+}
+
+.member-name {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.member-details {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.car-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.car-image-placeholder {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Заметки */
+.note-card {
+    background: #fff9c4;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    overflow: visible;
+}
+
+[data-theme="dark"] .note-card {
+    background: #5d4037;
+    color: #fff;
+}
+
+.note-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0 20px 20px 0;
+    border-style: solid;
+    border-color: #fff #fff #f0f0f0 #f0f0f0;
+    box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .note-card::after {
+    border-color: #8d6e63 #8d6e63 #5d4037 #5d4037;
+}
+
+.note-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.note-content {
+    flex-grow: 1;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.note-date {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-align: right;
+}
+
+.note-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.note-counter {
+    text-align: right;
+    font-size: 12px;
+    color: #8e8e93;
+    margin-top: 5px;
+}
+
+/* Список покупок */
+.shopping-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.shopping-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--glass-border);
+}
+
+.shopping-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.shopping-item-text {
+    flex-grow: 1;
+}
+
+.shopping-item.completed .shopping-item-text {
+    text-decoration: line-through;
+    color: var(--text-secondary);
+}
+
+.shopping-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--glass-border);
+}
+
+.clear-shopping-list {
+    background-color: #ff3b30;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.clear-shopping-list:hover {
+    background-color: #d70015;
+}
+
+/* Стили для иконок восстановления разделов */
+.restore-section-icon {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.restore-section-icon:hover {
+    transform: scale(1.05);
+}
+
+.section-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    padding: 15px;
+    background: var(--glass-color);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: all 0.2s ease;
+}
+
+.section-icon:hover {
+    background: var(--card-bg);
+    transform: translateY(-2px);
+}
+
+.section-icon-image {
+    font-size: 24px;
+    margin-bottom: 8px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg);
+    border-radius: 50%;
+    border: 2px solid var(--glass-border);
+}
+
+.section-icon-name {
+    font-size: 12px;
+    text-align: center;
+    color: var(--text-primary);
+    font-weight: 500;
+    line-height: 1.2;
+}
